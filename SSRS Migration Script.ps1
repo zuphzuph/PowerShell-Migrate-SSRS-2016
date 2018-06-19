@@ -5,7 +5,7 @@ $url = "http://$($reportserver)/reportserver/ReportService2010.asmx?wsdl";
 #Provide New Data source Path ,you need to replace this with correct one from your SSRS report
 $newDataSourcePath = "Directory Where DS Exists"
 #Provide new Data source Name which is part of above source path
-$newDataSourceName = "Fulle Path to DS";
+$newDataSourceName = "Full Path to DS";
 # provide Report folder path that contains reports to change the Data source.
 $reportFolderPath = "/Path to Reports"
 #------------------------------------------------------------------------
