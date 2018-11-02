@@ -1,13 +1,9 @@
 #Set variables:
-#Change the config mgr Report server name.
-$reportserver = "Server Name (DNS or IP)";
-$url = "http://$($reportserver)/reportserver/ReportService2010.asmx?wsdl";
-#Provide new data source path, you need to replace this with correct one from your SSRS report.
-$newDataSourcePath = "Directory Where DS Exists"
-#Provide new data source name which is part of above source path.
-$newDataSourceName = "Full Path to DS";
-#Provide report folder path that contains reports to change the data source.
-$reportFolderPath = "/Path to Reports"
+$reportserver = "DNS/IP";
+$url = "http://($reportserver)/reportserver/ReportService2010.asmx?wsdl";
+$newDataSourcePath = "ClientName"
+$newDataSourceName = "/ClientDir/dsHERE";
+$reportFolderPath = "/ClientDir/*"
 #------------------------------------------------------------------------
 $ssrs = New-WebServiceProxy -uri $url -UseDefaultCredential
 $reports = $ssrs.ListChildren($reportFolderPath, $false)
