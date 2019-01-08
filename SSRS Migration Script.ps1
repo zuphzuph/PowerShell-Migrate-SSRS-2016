@@ -1,9 +1,9 @@
 #Set variables:
 $reportserver = "DNS/IP";
 $url = "http://($reportserver)/reportserver/ReportService2010.asmx?wsdl";
-$newDataSourcePath = "ClientName"
+$newDataSourcePath = "ClientName";
 $newDataSourceName = "/ClientDir/dsHERE";
-$reportFolderPath = "/ClientDir/Dir"
+$reportFolderPath = "/ClientDir/Dir";
 #------------------------------------------------------------------------
 $ssrs = New-WebServiceProxy -uri $url -UseDefaultCredential
 $reports = $ssrs.ListChildren($reportFolderPath, $false)
