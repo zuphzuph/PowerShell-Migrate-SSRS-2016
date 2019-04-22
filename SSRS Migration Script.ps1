@@ -1,9 +1,11 @@
+#Ensure you're created the report path and placed reports to remap within that directory.
+#Tool here for moving: https://code.google.com/archive/p/reportsync/
+#Ensure you've created the DataSource used and have a valid connection string to your DB within it.
 #Set variables:
-$reportserver = "Hostname";
+$reportserver = "hostname";
 $url = "https://($reportserver)/reportserver/ReportService2010.asmx?wsdl";
-$newDataSourcePath = "ClientName";
 $newDataSourceName = "/ClientDir/dsHERE";
-$reportFolderPath = "/ClientDir/Dir";
+$reportFolderPath = "/ClientDir/Reports/DirContainingReports";
 #------------------------------------------------------------------------
 $ssrs = New-WebServiceProxy -uri $url -UseDefaultCredential
 $reports = $ssrs.ListChildren($reportFolderPath, $false)
