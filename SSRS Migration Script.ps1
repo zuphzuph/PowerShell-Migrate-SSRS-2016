@@ -1,6 +1,6 @@
 #Set variables:
-$reportserver = "DNS/IP";
-$url = "http://($reportserver)/reportserver/ReportService2010.asmx?wsdl";
+$reportserver = "Hostname";
+$url = "https://($reportserver)/reportserver/ReportService2010.asmx?wsdl";
 $newDataSourcePath = "ClientName";
 $newDataSourceName = "/ClientDir/dsHERE";
 $reportFolderPath = "/ClientDir/Dir";
